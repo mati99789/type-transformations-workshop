@@ -8,6 +8,8 @@
  * Which is which?
  */
 
+
+// Disriminated union
 type A =
   | {
       type: "a";
@@ -22,8 +24,10 @@ type A =
       c: string;
     };
 
+// Union
 type B = "a" | "b" | "c";
 
+// Enum
 enum C {
   A = "a",
   B = "b",

@@ -9,7 +9,8 @@ const getUser = () => {
 };
 
 type ReturnValue = ReturnType<typeof getUser>;
+type ReturnValueNotPromise = Awaited<ReturnValue>
 
 type tests = [
-  Expect<Equal<ReturnValue, { id: string; name: string; email: string }>>,
+  Expect<Equal<ReturnValueNotPromise, { id: string; name: string; email: string }>>,
 ];
